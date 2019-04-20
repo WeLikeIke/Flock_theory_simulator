@@ -42,11 +42,10 @@ public class Airspace extends Application{
 		mode.setOnAction(event3 -> {
 			if(species) {
 				current.setText("Current mode: one species");
-				species = false;
 			}else {
 				current.setText("Current mode: many species");
-				species = true;
 			}
+			species = !species;
 		});
 		
 		settings.getItems().addAll(mode,current);
@@ -63,7 +62,7 @@ public class Airspace extends Application{
 			};
 		};
 		
-		//task runs at 30 fps
+		//task runs at 30 tps (ticks per second)
 		timer.scheduleAtFixedRate(task, 0, 33l);
 		
 		Scene s = new Scene(root,width,height);

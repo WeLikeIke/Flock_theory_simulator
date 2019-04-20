@@ -1,1 +1,6 @@
 /bin/
+/src/master/Airspace$1.class
+/src/master/Airspace.class
+/src/master/Bird.class
+/src/master/Flock.class
+/src/master/Species.class
